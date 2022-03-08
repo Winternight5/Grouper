@@ -109,7 +109,7 @@
 
         const _storageList = localStorage.getItem('names');
         const _storagePerGroup = localStorage.getItem('perGroup');
-        _id("groupOf").value = _storagePerGroup;
+        _id("groupOf").value = _storagePerGroup ? _storagePerGroup : _id("groupOf").value;
 
         const myParam = location.search.split('names=')[1];
         _id("names").value = myParam ? decodeURI(myParam) : _storageList;
